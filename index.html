@@ -1,0 +1,566 @@
+<!-- 06 · QUIZZES INTERACTIVOS — CSS inline Moodle -->
+<div style="font-family:'Segoe UI',Arial,sans-serif;max-width:960px;margin:0 auto;padding-bottom:40px;">
+
+  <!-- HEADER -->
+  <div style="background:linear-gradient(135deg,#0d9488,#0b1f3a);padding:44px 40px;border-radius:16px;margin-bottom:28px;display:flex;gap:28px;align-items:center;">
+    <div style="flex:1;">
+      <p style="font-size:11px;letter-spacing:3px;text-transform:uppercase;color:#5eead4;font-weight:700;margin:0 0 10px;">⚡ Autoevaluación</p>
+      <h1 style="font-size:46px;font-weight:900;color:#fff;margin:0 0 10px;">Quizzes <span style="color:#5eead4;">Interactivos</span></h1>
+      <p style="color:rgba(255,255,255,.6);font-size:15px;line-height:1.7;margin:0;">Haz clic en <strong style="color:#5eead4;">Iniciar</strong> en cualquier quiz para cargar sus preguntas abajo. ¡Retroalimentación instantánea en cada respuesta!</p>
+    </div>
+    <div style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);border-radius:14px;padding:18px 24px;text-align:center;flex-shrink:0;">
+      <span style="display:block;font-size:48px;font-weight:900;color:#5eead4;line-height:1;">6</span>
+      <span style="font-size:12px;color:rgba(255,255,255,.5);font-weight:700;text-transform:uppercase;letter-spacing:1px;">Quizzes</span>
+    </div>
+  </div>
+
+  <!-- QUIZ SELECTOR CARDS -->
+  <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-bottom:32px;">
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">🏭</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 1 · Seguridad Industrial</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">EPP, señalización, triángulo de Heinrich y cultura preventiva.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#dbeafe;color:#1d4ed8;">5 preguntas</span>
+        <button onclick="loadQuiz(1)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#2563eb;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">🚦</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 2 · Seguridad Vial</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">Manejo defensivo, señales, velocidades y distancias de seguridad.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#fff7ed;color:#c2410c;">5 preguntas</span>
+        <button onclick="loadQuiz(2)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#ea580c;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">⚠️</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 3 · Riesgos Laborales</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">Fatiga al volante, MATPEL y protocolos de emergencia en ruta.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#fef9c3;color:#854d0e;">5 preguntas</span>
+        <button onclick="loadQuiz(3)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#f59e0b;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">🌿</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 4 · Medio Ambiente</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">Impacto ambiental, eco-driving y normativa COA e INEN.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#dcfce7;color:#15803d;">5 preguntas</span>
+        <button onclick="loadQuiz(4)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#16a34a;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">⚖️</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 5 · Normativa Legal</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">LOTTTSV, COIP, sistema de puntos y tipos de responsabilidad.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#ede9fe;color:#6d28d9;">5 preguntas</span>
+        <button onclick="loadQuiz(5)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#7c3aed;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+    <div style="background:#fff;border-radius:14px;border:1px solid #e2e8f0;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.06);">
+      <div style="padding:20px 18px;">
+        <div style="font-size:36px;margin-bottom:8px;">❤️</div>
+        <h3 style="font-size:15px;font-weight:800;color:#0b1f3a;margin:0 0 6px;">Quiz 6 · Salud Ocupacional</h3>
+        <p style="font-size:12px;color:#475569;margin:0;line-height:1.5;">Ergonomía en cabina, enfermedades profesionales y bienestar.</p>
+      </div>
+      <div style="padding:12px 18px;border-top:1px solid #e2e8f0;background:#f8fafc;display:flex;align-items:center;justify-content:space-between;">
+        <span style="padding:3px 10px;border-radius:100px;font-size:11px;font-weight:700;background:#fef2f2;color:#b91c1c;">5 preguntas</span>
+        <button onclick="loadQuiz(6)" style="padding:8px 18px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#dc2626;color:#fff;cursor:pointer;">⚡ Iniciar</button>
+      </div>
+    </div>
+
+  </div>
+
+  <!-- ZONA DE PREGUNTAS — empieza oculta, se llena con JS -->
+  <div id="quizZone" style="display:none;">
+
+    <!-- Título del quiz activo -->
+    <div id="quizTitle" style="background:linear-gradient(135deg,#0b1f3a,#1e3a6e);border-radius:14px;padding:18px 26px;margin-bottom:20px;display:flex;align-items:center;gap:14px;">
+      <span id="quizEmoji" style="font-size:32px;"></span>
+      <div>
+        <p id="quizLabel" style="font-size:10px;letter-spacing:3px;text-transform:uppercase;color:rgba(255,255,255,.4);margin:0 0 4px;font-weight:700;"></p>
+        <h2 id="quizName" style="font-size:20px;font-weight:800;color:#fff;margin:0;"></h2>
+      </div>
+    </div>
+
+    <!-- Barra de progreso -->
+    <div style="display:flex;align-items:center;gap:12px;margin-bottom:20px;">
+      <div style="flex:1;height:8px;background:#e2e8f0;border-radius:100px;overflow:hidden;">
+        <div id="qprog" style="height:100%;width:0%;border-radius:100px;transition:width .4s;"></div>
+      </div>
+      <span id="qlab" style="font-size:12px;font-weight:700;color:#475569;white-space:nowrap;min-width:40px;text-align:right;"></span>
+    </div>
+
+    <!-- Caja de pregunta -->
+    <div id="questionBox" style="background:linear-gradient(135deg,#0b1f3a,#1e3a6e);border-radius:12px;padding:24px 26px;margin-bottom:18px;">
+      <p style="font-size:10px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.4);margin:0 0 10px;font-weight:700;">Pregunta</p>
+      <p id="qtxt" style="color:#fff;font-size:16px;font-weight:600;line-height:1.65;margin:0;"></p>
+    </div>
+
+    <!-- Opciones -->
+    <div id="qopts" style="display:flex;flex-direction:column;gap:10px;margin-bottom:16px;"></div>
+
+    <!-- Feedback -->
+    <div id="qfb" style="display:none;padding:14px 18px;border-radius:12px;font-size:14px;font-weight:600;line-height:1.65;margin-bottom:16px;"></div>
+
+    <!-- Botones -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;">
+      <button id="btnReset" onclick="resetQ()" style="padding:10px 22px;border-radius:100px;font-size:13px;font-weight:700;border:2px solid #e2e8f0;background:transparent;color:#475569;cursor:pointer;">🔄 Reintentar</button>
+      <button id="btnNext" onclick="nextQ()" style="padding:10px 22px;border-radius:100px;font-size:13px;font-weight:700;border:none;background:#0d9488;color:#fff;cursor:pointer;">Siguiente ➡</button>
+    </div>
+
+    <!-- Resultado final -->
+    <div id="qscore" style="display:none;margin-top:20px;text-align:center;padding:32px;border-radius:16px;border:2px solid #86efac;background:linear-gradient(135deg,#dcfce7,#d1fae5);">
+      <div id="scoreEmoji" style="font-size:56px;margin-bottom:10px;"></div>
+      <div id="scorenum" style="font-size:64px;font-weight:900;color:#16a34a;line-height:1;margin-bottom:8px;"></div>
+      <div id="scorelbl" style="font-size:18px;font-weight:800;color:#15803d;margin-bottom:6px;"></div>
+      <div id="scoresub" style="font-size:14px;color:#166534;margin-bottom:20px;"></div>
+      <button onclick="resetAll()" style="padding:12px 28px;border-radius:100px;font-size:14px;font-weight:700;border:none;background:#0d9488;color:#fff;cursor:pointer;">🔄 Intentar de nuevo</button>
+    </div>
+
+  </div>
+
+  <!-- Mensaje inicial (visible hasta que se haga clic) -->
+  <div id="quizPlaceholder" style="background:#fff;border-radius:16px;border:2px dashed #e2e8f0;padding:48px;text-align:center;">
+    <div style="font-size:56px;margin-bottom:16px;">👆</div>
+    <h3 style="font-size:20px;font-weight:800;color:#0b1f3a;margin:0 0 8px;">Selecciona un Quiz para comenzar</h3>
+    <p style="font-size:15px;color:#94a3b8;margin:0;">Haz clic en el botón <strong style="color:#0d9488;">⚡ Iniciar</strong> de cualquiera de los quizzes de arriba y las preguntas aparecerán aquí.</p>
+  </div>
+
+</div>
+
+<script>
+var QUIZDATA = {
+  1: {
+    name: "Quiz 1 · Seguridad Industrial",
+    label: "UNIDAD 1 · SEGURIDAD INDUSTRIAL",
+    emoji: "🏭",
+    color: "#2563eb",
+    qs: [
+      {
+        q: "Según el modelo del Triángulo de Heinrich, por cada accidente grave existen aproximadamente 29 accidentes leves y ¿cuántos incidentes sin lesión?",
+        opts: ["100 incidentes", "200 incidentes", "300 incidentes", "500 incidentes"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La pirámide de Heinrich establece: 1 accidente grave → 29 accidentes leves → 300 incidentes sin lesión. Esto indica que por cada tragedia, hubo cientos de señales de advertencia previas.",
+        fb_err: "❌ Incorrecto. La respuesta es 300 incidentes. El Triángulo de Heinrich muestra que la base de la siniestralidad está formada por eventos leves que, si no se corrigen, escalan a accidentes graves."
+      },
+      {
+        q: "¿Cuál de los siguientes elementos NO forma parte del EPP obligatorio para el conductor profesional durante operaciones de carga y descarga?",
+        opts: ["Casco de seguridad", "Chaleco reflectante", "Cinturón lumbar de apoyo postural", "Calzado con puntera de acero"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! El cinturón lumbar no es EPP obligatorio en la lista básica del conductor. Los EPP esenciales son: casco, chaleco reflectante, calzado de seguridad, guantes y protectores auditivos según la operación.",
+        fb_err: "❌ Incorrecto. El cinturón lumbar no está en la lista de EPP obligatorio básico del conductor. Los obligatorios son: casco, chaleco reflectante, calzado con puntera y guantes en operaciones de carga."
+      },
+      {
+        q: "El color ROJO en la señalización de seguridad industrial indica:",
+        opts: ["Obligación o información de seguridad", "Salvamento o emergencia", "Peligro, prohibición o equipos contra incendios", "Advertencia o precaución ante riesgos moderados"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! El rojo en señalización industrial significa peligro, prohibición o identifica equipos de extinción de incendios. Es el color de más alta alerta.",
+        fb_err: "❌ Incorrecto. El rojo indica peligro, prohibición o equipos contra incendios. El amarillo es para advertencias, el verde para salvamento y el azul para obligaciones."
+      },
+      {
+        q: "La cultura de prevención en el trabajo implica que el conductor debe:",
+        opts: ["Esperar a que el empleador detecte las fallas del vehículo", "Reportar fallas solo cuando el jefe pregunta", "Realizar la revisión preoperacional diaria y reportar inmediatamente cualquier anomalía", "Continuar el viaje si la falla parece leve y el cliente urge"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La cultura preventiva implica acción proactiva: revisión diaria del vehículo, reporte inmediato de fallas y rechazo a presiones que comprometan la seguridad. Esta actitud previene el 90% de los accidentes.",
+        fb_err: "❌ Incorrecto. La cultura preventiva exige que el conductor realice la revisión preoperacional CADA DÍA y reporte INMEDIATAMENTE cualquier falla, sin esperar instrucciones ni ceder a presiones de tiempo."
+      },
+      {
+        q: "El Decreto Ejecutivo 2393 de Ecuador regula principalmente:",
+        opts: ["Los límites de velocidad en carretera", "La seguridad y salud de los trabajadores y el ambiente laboral", "Los requisitos para obtener la licencia tipo E", "Las multas por infracciones de tránsito"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! El Decreto 2393 es el Reglamento de Seguridad y Salud de los Trabajadores y Mejoramiento del Medio Ambiente de Trabajo. Es la norma principal en salud ocupacional en Ecuador.",
+        fb_err: "❌ Incorrecto. El Decreto 2393 regula la seguridad y salud de los trabajadores. Los límites de velocidad están en la LOTTTSV, y las multas de tránsito en el COIP."
+      }
+    ]
+  },
+  2: {
+    name: "Quiz 2 · Seguridad Vial",
+    label: "UNIDAD 2 · SEGURIDAD VIAL",
+    emoji: "🚦",
+    color: "#ea580c",
+    qs: [
+      {
+        q: "Un camión de carga circula a 80 km/h en carretera nacional. ¿Cuál es la distancia mínima de seguimiento recomendada para transporte pesado?",
+        opts: ["50 metros (2 segundos)", "70 metros (3 segundos)", "90 metros (4 segundos)", "120 metros (5 segundos)"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La regla de los 4 segundos es el estándar para transporte pesado. A 80 km/h equivale a ~90 metros, compensando el mayor tiempo de frenado del camión cargado.",
+        fb_err: "❌ Incorrecto. La respuesta es C: 90 metros (4 segundos). Para vehículos pesados se recomienda esta distancia mayor por su masa y tiempo de frenado superior al de un automóvil."
+      },
+      {
+        q: "Según la LOTTTSV, ¿cuál es la velocidad máxima para vehículos de transporte de carga en zona urbana?",
+        opts: ["40 km/h", "50 km/h", "60 km/h", "70 km/h"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! La LOTTTSV establece 50 km/h en zonas urbanas. En zonas escolares y hospitalarias el límite baja a 30 km/h para todos los vehículos, incluyendo transporte pesado.",
+        fb_err: "❌ Incorrecto. La velocidad máxima en zona urbana es 50 km/h según la LOTTTSV. En zonas especiales (escuelas, hospitales) el límite es 30 km/h."
+      },
+      {
+        q: "¿Cuál de los siguientes NO es un principio del manejo defensivo?",
+        opts: ["Conocimiento del vehículo y normas", "Alertness — alerta permanente", "Velocidad máxima en todo momento", "Previsión de errores de terceros"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! Los 5 principios del manejo defensivo son: Conocimiento, Alertness (Alerta), Previsión, Juicio y Habilidad. Velocidad máxima contradice el manejo defensivo que busca la velocidad ADECUADA.",
+        fb_err: "❌ Incorrecto. 'Velocidad máxima en todo momento' no es un principio del manejo defensivo; es su opuesto. Los 5 principios son: Conocimiento, Alerta, Previsión, Juicio y Habilidad."
+      },
+      {
+        q: "En Ecuador, la velocidad máxima para transporte de carga pesada en carretera (fuera de zona urbana) es:",
+        opts: ["70 km/h", "80 km/h", "90 km/h", "100 km/h"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La LOTTTSV establece 90 km/h en carretera para vehículos de carga. En autopistas el límite sube a 100 km/h para este tipo de vehículos.",
+        fb_err: "❌ Incorrecto. La velocidad máxima en carretera para transporte de carga es 90 km/h según la LOTTTSV. En autopistas el límite es 100 km/h."
+      },
+      {
+        q: "Las señales de tránsito de forma ROMBO con fondo AMARILLO en la norma INEN 004 corresponden a señales:",
+        opts: ["Regulatorias — indican prohibición u obligación", "Preventivas — advierten sobre peligros próximos", "Informativas — orientan sobre destinos y distancias", "Especiales — indican peso o altura máxima"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! Las señales preventivas son de forma rombo (o diamante) con fondo amarillo. Advierten al conductor sobre condiciones peligrosas que encontrará más adelante: curvas, pendientes, cruces.",
+        fb_err: "❌ Incorrecto. Las señales romboidales amarillas son PREVENTIVAS. Las circulares rojas son regulatorias, las rectangulares verdes son informativas y las azules son especiales u obligatorias."
+      }
+    ]
+  },
+  3: {
+    name: "Quiz 3 · Riesgos Laborales",
+    label: "UNIDAD 3 · RIESGOS LABORALES",
+    emoji: "⚠️",
+    color: "#f59e0b",
+    qs: [
+      {
+        q: "Según la LOTTTSV, ¿cuántas horas continuas de conducción como máximo puede realizar un conductor profesional antes de tomar un descanso obligatorio?",
+        opts: ["2 horas continuas", "3 horas continuas", "4 horas continuas", "6 horas continuas"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La normativa establece máximo 4 horas continuas de conducción, seguidas de al menos 30 minutos de descanso. La jornada total no puede superar las 10 horas en 24 horas.",
+        fb_err: "❌ Incorrecto. El máximo es 4 horas continuas, con un descanso mínimo de 30 minutos. Superar este límite es una infracción grave y multiplica el riesgo de accidente por fatiga."
+      },
+      {
+        q: "Las mercancías peligrosas CLASE 3 según el sistema ONU corresponden a:",
+        opts: ["Explosivos", "Gases inflamables o tóxicos", "Líquidos inflamables — combustibles y solventes", "Sustancias corrosivas"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La Clase 3 son los líquidos inflamables (gasolina, diésel, solventes, pinturas). Su rombo es de color rojo con llamas. El conductor debe portar la Hoja SDS para este tipo de carga.",
+        fb_err: "❌ Incorrecto. La Clase 3 son los líquidos inflamables. La Clase 1 son explosivos, la Clase 2 son gases, y la Clase 8 son corrosivos."
+      },
+      {
+        q: "El protocolo de actuación ante un accidente de tránsito en ruta se resume en la secuencia:",
+        opts: ["Socorrer → Alertar → Proteger → Esperar", "Alertar → Proteger → Socorrer → Huir", "Proteger → Alertar → Socorrer → Esperar", "Fotografiar → Llamar → Esperar → Irse"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! El protocolo es: PROTEGER (señalizar la zona con triángulos a 50m), ALERTAR (llamar al ECU-911), SOCORRER (primeros auxilios básicos sin mover víctimas con sospecha de lesión de columna) y ESPERAR a las autoridades.",
+        fb_err: "❌ Incorrecto. El orden correcto es: PROTEGER → ALERTAR → SOCORRER → ESPERAR. Primero se asegura la zona para evitar nuevos accidentes, luego se llama al ECU-911, se atienden víctimas y se espera a las autoridades."
+      },
+      {
+        q: "Un conductor que transporta mercancías peligrosas DEBE portar obligatoriamente:",
+        opts: ["Solo la guía de carga del cliente", "La Hoja de Seguridad del Material (SDS/MSDS)", "El contrato de trabajo con la empresa", "El manual del propietario del vehículo"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! La Hoja SDS (Safety Data Sheet) o MSDS es obligatoria para cualquier transporte MATPEL. Describe las propiedades del producto, riesgos para la salud y ambiente, y procedimientos de emergencia.",
+        fb_err: "❌ Incorrecto. El documento obligatorio para transporte MATPEL es la Hoja SDS/MSDS. Contiene propiedades del producto, riesgos, EPP necesario y qué hacer en caso de emergencia o derrame."
+      },
+      {
+        q: "¿Cuál de las siguientes es una señal de ALERTA de fatiga al volante?",
+        opts: ["Sentir hambre moderada", "No recordar los últimos kilómetros recorridos", "Querer escuchar música", "Sentir calor dentro de la cabina"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! No recordar los últimos kilómetros es una señal crítica de que el conductor ha tenido microsuelos (episodios de sueño de 2 a 30 segundos). En ese punto se debe detener inmediatamente.",
+        fb_err: "❌ Incorrecto. No recordar los últimos kilómetros indica que el conductor ya tuvo microsuelos. Otras señales de fatiga: parpadeo frecuente, derivas de carril y dificultad para mantener la atención en la vía."
+      }
+    ]
+  },
+  4: {
+    name: "Quiz 4 · Medio Ambiente",
+    label: "UNIDAD 4 · SEGURIDAD AMBIENTAL",
+    emoji: "🌿",
+    color: "#16a34a",
+    qs: [
+      {
+        q: "¿Qué porcentaje de reducción en el consumo de combustible puede lograr un conductor que aplica correctamente las técnicas de eco-driving?",
+        opts: ["Entre 2% y 5%", "Entre 5% y 10%", "Entre 10% y 25%", "Más del 40%"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La conducción ecoeficiente puede reducir el consumo entre un 10% y 25% según estudios. Para un camión que recorre 150,000 km/año esto representa un ahorro de miles de dólares y toneladas de CO₂.",
+        fb_err: "❌ Incorrecto. El eco-driving permite ahorrar entre 10% y 25% de combustible. En un camión de largo recorrido, ese ahorro representa miles de dólares y una reducción significativa de emisiones de CO₂."
+      },
+      {
+        q: "La norma INEN que establece los límites máximos permisibles de emisión de gases de escape para motores DIESEL en Ecuador es:",
+        opts: ["INEN 2204", "INEN 2207", "INEN 1678", "INEN 3000"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! La INEN 2207 aplica a vehículos con motor diesel e incluye las pruebas de opacidad de humos. El incumplimiento impide la obtención de la matrícula vehicular en la revisión técnica (RTV).",
+        fb_err: "❌ Incorrecto. La INEN 2207 es la norma para emisiones de motores diesel (prueba de opacidad). La INEN 2204 aplica para gasolina. Ambas se verifican en la Revisión Técnica Vehicular (RTV)."
+      },
+      {
+        q: "¿Cuál de estas prácticas forma parte de la conducción ecoeficiente?",
+        opts: ["Acelerar rápidamente entre semáforos para reducir el tiempo en ruta", "Apagar el motor en paradas superiores a 3 minutos", "Mantener los neumáticos con baja presión para mayor agarre", "Usar marchas bajas a toda velocidad para tener más potencia"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! Apagar el motor en paradas largas es una práctica clave del eco-driving. Un camión en ralentí consume entre 2 y 4 litros por hora sin avanzar. En 250 paradas al año, el ahorro es significativo.",
+        fb_err: "❌ Incorrecto. Apagar el motor en paradas de más de 3 minutos es eco-driving. Las aceleraciones bruscas, los neumáticos desinflados y las marchas bajas a alta velocidad aumentan el consumo de combustible."
+      },
+      {
+        q: "El Código Orgánico del Ambiente (COA) de Ecuador establece que ante un derrame accidental de mercancías contaminantes, el conductor debe:",
+        opts: ["Limpiar el derrame con agua y continuar el viaje", "Activar el protocolo de emergencia y notificar al Ministerio del Ambiente", "Cubrir el derrame con tierra y reportarlo a la empresa al llegar", "Esperar a que la lluvia limpie naturalmente el área"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! El COA obliga a activar el protocolo de emergencia MATPEL y notificar inmediatamente al Ministerio del Ambiente. La responsabilidad ambiental puede ser administrativa, civil e incluso penal.",
+        fb_err: "❌ Incorrecto. El COA exige activar el protocolo de emergencia y notificar al Ministerio del Ambiente. Encubrir o minimizar un derrame puede generar responsabilidad penal bajo el principio de responsabilidad objetiva."
+      },
+      {
+        q: "Los aceites usados generados por el mantenimiento del camión son considerados:",
+        opts: ["Residuos comunes que pueden verterse en cualquier recipiente", "Residuos peligrosos que deben entregarse a gestores autorizados", "Subproductos reutilizables que se pueden vender libremente", "Materiales de bajo impacto ambiental sin regulación especial"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! Los aceites usados son residuos peligrosos según el COA. Deben entregarse exclusivamente a gestores autorizados. Verterlos al suelo o alcantarillado genera responsabilidad legal y daños ambientales graves.",
+        fb_err: "❌ Incorrecto. Los aceites usados son residuos peligrosos y deben manejarse a través de gestores autorizados. Desecharlos inadecuadamente contamina el suelo y el agua, y genera sanciones administrativas y penales."
+      }
+    ]
+  },
+  5: {
+    name: "Quiz 5 · Normativa Legal",
+    label: "UNIDAD 5 · MARCO LEGAL ECUATORIANO",
+    emoji: "⚖️",
+    color: "#7c3aed",
+    qs: [
+      {
+        q: "¿Cuántos puntos tiene como máximo una licencia tipo E en el sistema de puntos de la LOTTTSV?",
+        opts: ["20 puntos", "25 puntos", "30 puntos", "40 puntos"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La licencia tipo E parte con 30 puntos. Las infracciones se descuentan según su gravedad. Al agotar todos los puntos, la licencia es suspendida y el conductor debe tomar cursos para recuperar el puntaje.",
+        fb_err: "❌ Incorrecto. La licencia tipo E tiene 30 puntos máximos. Los puntos se descuentan por infracciones y, al llegar a cero, la licencia es suspendida temporalmente."
+      },
+      {
+        q: "El COIP ecuatoriano considera delito penal (no solo infracción administrativa) cuando un conductor:",
+        opts: ["Conduce sin cinturón de seguridad", "Causa la muerte de una persona por imprudencia al conducir", "Excede el límite de velocidad en 10 km/h", "Estaciona en zona prohibida"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! Causar la muerte por imprudencia, negligencia o impericia es un delito de tránsito culposo en el COIP, penado con 1 a 3 años de privación de libertad. Las otras opciones son contravenciones administrativas.",
+        fb_err: "❌ Incorrecto. Causar la muerte por imprudencia es un delito penal según el COIP (Art. sobre delitos culposos de tránsito). Las otras opciones son contravenciones sancionadas con multas y descuento de puntos."
+      },
+      {
+        q: "Los tres tipos de responsabilidad jurídica que puede enfrentar un conductor ante un accidente de tránsito son:",
+        opts: ["Laboral, familiar y personal", "Administrativa, civil y penal", "Técnica, económica y moral", "Municipal, provincial y nacional"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! Los tres tipos son: Administrativa (multas, puntos, suspensión de licencia), Civil (reparación económica de daños a terceros) y Penal (privación de libertad según el COIP). Pueden concurrir simultáneamente.",
+        fb_err: "❌ Incorrecto. Los tres tipos de responsabilidad son: Administrativa (ANT/GAD), Civil (reparación de daños) y Penal (COIP, privación de libertad). Las tres pueden activarse al mismo tiempo ante un mismo accidente."
+      },
+      {
+        q: "¿Cuál es la tolerancia máxima de alcohol en sangre permitida para conductores PROFESIONALES en Ecuador?",
+        opts: ["0.8 g/l (igual que conductores particulares)", "0.5 g/l", "0.3 g/l", "0.0 g/l (tolerancia cero)"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! Los conductores profesionales tienen una tolerancia menor: 0.3 g/l. Los conductores particulares tienen hasta 0.3 g/l en nivel leve y hasta 0.8 g/l en nivel moderado. Superar el límite profesional activa el COIP.",
+        fb_err: "❌ Incorrecto. La tolerancia para conductores profesionales es de 0.3 g/l, más estricta que para conductores particulares. Superarla constituye un delito según el COIP con consecuencias penales directas."
+      },
+      {
+        q: "La responsabilidad penal de un conductor que causa un accidente con víctimas es:",
+        opts: ["Transferible a la empresa propietaria del vehículo si esta lo autoriza", "Asumible por el seguro SOAT del vehículo", "Personal e intransferible — solo el conductor responde", "Compartida entre el conductor y el fabricante del vehículo"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! La responsabilidad penal es PERSONAL E INTRANSFERIBLE. Ninguna empresa, seguro ni tercero puede cumplir la pena privativa de libertad en lugar del conductor. El SOAT cubre lo civil, no lo penal.",
+        fb_err: "❌ Incorrecto. La responsabilidad penal es siempre personal e intransferible. Ninguna empresa ni seguro puede asumir una condena de privación de libertad. Por eso cada decisión al volante tiene consecuencias directas para el conductor."
+      }
+    ]
+  },
+  6: {
+    name: "Quiz 6 · Salud Ocupacional",
+    label: "UNIDAD 6 · SALUD OCUPACIONAL",
+    emoji: "❤️",
+    color: "#dc2626",
+    qs: [
+      {
+        q: "La enfermedad profesional más frecuente en conductores de transporte pesado por la vibración continua del vehículo y la postura sedentaria prolongada es:",
+        opts: ["Hipoacusia (pérdida auditiva)", "Lumbalgia y hernias discales", "Conjuntivitis crónica", "Dermatitis por contacto"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! La lumbalgia y las hernias discales son las enfermedades profesionales más frecuentes en conductores. Las vibraciones del vehículo y la postura sedentaria someten la columna lumbar a carga sostenida durante años.",
+        fb_err: "❌ Incorrecto. La lumbalgia y hernias discales son las más frecuentes. Aunque la hipoacusia también es común (por el ruido del motor), la columna lumbar es la zona más afectada por la combinación de postura y vibración."
+      },
+      {
+        q: "¿Cuál es el ángulo de inclinación correcto del espaldar del asiento de conducción para reducir la carga lumbar?",
+        opts: ["90 grados (totalmente recto)", "100 a 110 grados (levemente reclinado)", "120 a 130 grados (muy reclinado)", "70 a 80 grados (inclinado hacia adelante)"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! El ángulo óptimo es entre 100° y 110°. Esta inclinación distribuye el peso sobre el espaldar, reduce la presión en los discos intervertebrales y disminuye la tensión muscular durante jornadas largas.",
+        fb_err: "❌ Incorrecto. El ángulo correcto es 100°-110° (levemente reclinado). A 90° (totalmente recto) se genera más tensión muscular. Muy reclinado dificulta el control del volante y la visión de espejos."
+      },
+      {
+        q: "¿Cada cuánto tiempo se recomienda una pausa activa (caminar, estirar) durante una jornada de conducción?",
+        opts: ["Cada 30 minutos", "Cada hora", "Cada 2 horas", "Cada 4 horas (solo cuando la norma lo exige)"],
+        ok: 2,
+        fb_ok: "✅ ¡Correcto! Se recomienda una pausa activa de 5-10 minutos cada 2 horas. Caminar y estirar la musculatura de piernas, espalda y cuello mejora la circulación y reduce la fatiga física, mejorando también el estado de alerta.",
+        fb_err: "❌ Incorrecto. La recomendación de salud ocupacional es una pausa activa cada 2 horas (más frecuente que la pausa obligatoria legal de cada 4 horas). Esto mejora la circulación y reduce la fatiga muscular acumulada."
+      },
+      {
+        q: "Un conductor que consume bebidas muy azucaradas o comidas copiosas antes de jornadas nocturnas corre el riesgo de:",
+        opts: ["Mejorar su rendimiento por el aporte energético", "Experimentar un pico de energía seguido de somnolencia (hipoglucemia reactiva)", "Aumentar su concentración durante las primeras horas", "Reducir el tiempo de reacción solo si supera cierta cantidad"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! El azúcar y las comidas copiosas generan un pico de glucosa seguido de hipoglucemia reactiva, que produce somnolencia intensa. Para jornadas nocturnas se recomiendan alimentos de bajo índice glucémico: frutas, nueces, yogur.",
+        fb_err: "❌ Incorrecto. Los alimentos muy azucarados y las comidas copiosas generan picos de glucosa seguidos de somnolencia. Para conducción nocturna son especialmente peligrosos. Prefiera alimentos de bajo índice glucémico."
+      },
+      {
+        q: "El síndrome del túnel carpiano, que puede desarrollar un conductor profesional, se asocia principalmente a:",
+        opts: ["Exposición prolongada al ruido del motor", "Vibración continua del volante y movimientos repetitivos de muñeca", "Posturas inadecuadas del cuello al revisar espejos", "Estrés laboral por presión de los plazos de entrega"],
+        ok: 1,
+        fb_ok: "✅ ¡Correcto! El síndrome del túnel carpiano en conductores se asocia a la vibración del volante y los movimientos repetitivos de flexión y giro de la muñeca. Es una enfermedad profesional reconocida en el sector transporte.",
+        fb_err: "❌ Incorrecto. El túnel carpiano en conductores está asociado a la vibración del volante y los movimientos repetitivos de la muñeca. El ruido causa hipoacusia, la postura del cuello causa cervicalgia y el estrés causa otras patologías."
+      }
+    ]
+  }
+};
+
+var cur = 0;
+var score = 0;
+var answered = false;
+var activeQuiz = null;
+var letters = ['A','B','C','D'];
+var colors = {
+  1: "#2563eb", 2: "#ea580c", 3: "#f59e0b",
+  4: "#16a34a", 5: "#7c3aed", 6: "#dc2626"
+};
+
+function loadQuiz(num) {
+  activeQuiz = QUIZDATA[num];
+  cur = 0;
+  score = 0;
+  answered = false;
+
+  // Ocultar placeholder, mostrar zona quiz
+  document.getElementById('quizPlaceholder').style.display = 'none';
+  document.getElementById('quizZone').style.display = 'block';
+  document.getElementById('qscore').style.display = 'none';
+  document.getElementById('qopts').style.display = 'flex';
+  document.getElementById('questionBox').style.display = 'block';
+  document.getElementById('qfb').style.display = 'none';
+  document.getElementById('btnReset').style.display = 'inline-flex';
+  document.getElementById('btnNext').style.display = 'inline-flex';
+
+  // Actualizar título
+  document.getElementById('quizEmoji').textContent = activeQuiz.emoji;
+  document.getElementById('quizLabel').textContent = activeQuiz.label;
+  document.getElementById('quizName').textContent = activeQuiz.name;
+
+  // Color de la barra
+  document.getElementById('qprog').style.background = 'linear-gradient(90deg,' + colors[num] + ', #0d9488)';
+
+  // Botón "Siguiente" con el color del quiz
+  document.getElementById('btnNext').style.background = colors[num];
+
+  // Scroll a la zona del quiz
+  document.getElementById('quizZone').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+  render();
+}
+
+function render() {
+  var d = activeQuiz.qs[cur];
+  document.getElementById('qtxt').textContent = d.q;
+  document.getElementById('qprog').style.width = ((cur + 1) / activeQuiz.qs.length * 100) + '%';
+  document.getElementById('qlab').textContent = (cur + 1) + ' / ' + activeQuiz.qs.length;
+
+  var html = '';
+  for (var i = 0; i < d.opts.length; i++) {
+    html += '<div id="opt' + i + '" onclick="checkAns(' + i + ',' + (i === d.ok ? 'true' : 'false') + ')" style="padding:13px 16px;border-radius:10px;border:2px solid #e2e8f0;background:#fff;cursor:pointer;font-size:14px;font-weight:600;color:#0f172a;display:flex;align-items:center;gap:12px;">';
+    html += '<span style="width:28px;height:28px;border-radius:8px;background:#e2e8f0;display:inline-flex;align-items:center;justify-content:center;font-size:12px;font-weight:800;flex-shrink:0;">' + letters[i] + '</span>';
+    html += d.opts[i] + '</div>';
+  }
+  document.getElementById('qopts').innerHTML = html;
+  document.getElementById('qfb').style.display = 'none';
+  answered = false;
+}
+
+function checkAns(i, correct) {
+  if (answered) return;
+  answered = true;
+  var d = activeQuiz.qs[cur];
+
+  // Deshabilitar todas las opciones
+  for (var j = 0; j < d.opts.length; j++) {
+    var el = document.getElementById('opt' + j);
+    if (el) el.style.pointerEvents = 'none';
+  }
+
+  var chosen = document.getElementById('opt' + i);
+  var fb = document.getElementById('qfb');
+
+  if (correct) {
+    score++;
+    chosen.style.borderColor = '#16a34a';
+    chosen.style.background = '#dcfce7';
+    chosen.style.color = '#15803d';
+    var ltr = chosen.querySelector('span');
+    if (ltr) { ltr.style.background = '#16a34a'; ltr.style.color = '#fff'; }
+    fb.style.background = '#dcfce7';
+    fb.style.border = '1px solid #86efac';
+    fb.style.color = '#15803d';
+    fb.textContent = d.fb_ok;
+  } else {
+    chosen.style.borderColor = '#dc2626';
+    chosen.style.background = '#fef2f2';
+    chosen.style.color = '#dc2626';
+    var ltrWrong = chosen.querySelector('span');
+    if (ltrWrong) { ltrWrong.style.background = '#dc2626'; ltrWrong.style.color = '#fff'; }
+    // Resaltar la correcta
+    var correct_el = document.getElementById('opt' + d.ok);
+    if (correct_el) {
+      correct_el.style.borderColor = '#16a34a';
+      correct_el.style.background = '#dcfce7';
+      correct_el.style.color = '#15803d';
+      var ltrOk = correct_el.querySelector('span');
+      if (ltrOk) { ltrOk.style.background = '#16a34a'; ltrOk.style.color = '#fff'; }
+    }
+    fb.style.background = '#fef2f2';
+    fb.style.border = '1px solid #fca5a5';
+    fb.style.color = '#dc2626';
+    fb.textContent = d.fb_err;
+  }
+  fb.style.display = 'block';
+}
+
+function nextQ() {
+  cur++;
+  if (cur >= activeQuiz.qs.length) {
+    showScore();
+  } else {
+    render();
+  }
+}
+
+function showScore() {
+  document.getElementById('qopts').style.display = 'none';
+  document.getElementById('questionBox').style.display = 'none';
+  document.getElementById('qfb').style.display = 'none';
+  document.getElementById('btnReset').style.display = 'none';
+  document.getElementById('btnNext').style.display = 'none';
+
+  var pct = Math.round((score / activeQuiz.qs.length) * 100);
+  var emoji = pct >= 80 ? '🏆' : pct >= 60 ? '👍' : '📖';
+  var label = pct >= 80 ? '¡Excelente resultado!' : pct >= 60 ? '¡Buen intento!' : 'Sigue practicando';
+  var sub = 'Respondiste ' + score + ' de ' + activeQuiz.qs.length + ' preguntas correctamente (' + pct + '%).';
+
+  document.getElementById('scoreEmoji').textContent = emoji;
+  document.getElementById('scorenum').textContent = score + '/' + activeQuiz.qs.length;
+  document.getElementById('scorelbl').textContent = label;
+  document.getElementById('scoresub').textContent = sub;
+  document.getElementById('qscore').style.display = 'block';
+  document.getElementById('qprog').style.width = '100%';
+  document.getElementById('qlab').textContent = activeQuiz.qs.length + ' / ' + activeQuiz.qs.length;
+}
+
+function resetQ() {
+  render();
+}
+
+function resetAll() {
+  cur = 0;
+  score = 0;
+  document.getElementById('qscore').style.display = 'none';
+  document.getElementById('qopts').style.display = 'flex';
+  document.getElementById('questionBox').style.display = 'block';
+  document.getElementById('btnReset').style.display = 'inline-flex';
+  document.getElementById('btnNext').style.display = 'inline-flex';
+  render();
+}
+</script>
